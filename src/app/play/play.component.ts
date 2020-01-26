@@ -5,9 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './play.component.html',
   styleUrls: ['./play.component.scss']
 })
-export class PlayComponent implements OnInit {
 
-  constructor() { }
+export class PlayComponent implements OnInit {
+  testValue: String;
+
+  constructor() {
+    this.testValue = "STring";
+  }
 
   ngOnInit() {
   }

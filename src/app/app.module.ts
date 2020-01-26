@@ -7,6 +7,7 @@ import { TestComponent } from './test/test.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { PlayComponent } from './play/play.component';
+import { BoardComponent } from './board/board.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { PlayComponent } from './play/play.component';
     TestComponent,
     PageNotFoundComponent,
     HomeComponent,
-    PlayComponent
+    PlayComponent,
+    BoardComponent
   ],
   providers: [],
   bootstrap: [
