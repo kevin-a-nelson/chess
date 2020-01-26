@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { PlayComponent } from './play/play.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     TestComponent,
     PageNotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    PlayComponent
   ],
   providers: [],
   bootstrap: [

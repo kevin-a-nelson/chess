@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TestComponent } from './test/test.component';
-import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { PlayComponent } from './play/play.component';
 
 const routes: Routes = [
   {
@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestComponent
+  },
+  {
+    path: 'play',
+    component: PlayComponent,
   },
   {
     path: '',
