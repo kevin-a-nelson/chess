@@ -1,1 +1,7 @@
-<h1>Board</h1>
+<div class="board">
+    <div class="row" *ngFor="let row of board.board; index as j">
+        <div class="column" *ngFor="let column of row; index as k">
+            {{ board.board[j][k] }}
+        </div>
+    </div>
+</div>

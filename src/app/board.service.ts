@@ -13,5 +13,4 @@ export class BoardService {
   getBoard(): Board {
     return CHESS_BOARD;
   }
-
 }

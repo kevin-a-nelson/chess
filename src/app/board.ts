@@ -1,4 +1,3 @@
 export class Board {
-    columns: number,
-    rows: number,
+    board: Array<Array<string>>;
 }
