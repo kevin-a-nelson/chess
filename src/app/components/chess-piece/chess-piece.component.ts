@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ChessPieceService } from '../../services/chess-piece/chess-piece.service';
+import { ChessPiece } from '../../services/chess-piece/chess-piece';
 
 @Component({
   selector: 'app-chess-piece',
@@ -8,10 +10,11 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class ChessPieceComponent implements OnInit {
   @Input() piece: string;
+  chessPiece: ChessPiece;
 
-  constructor() { }
+  constructor(private service: ChessPieceService) { }
 
   ngOnInit() {
-
+    this.chessPiece = this.service.getPiece(this.piece);
   }
 }

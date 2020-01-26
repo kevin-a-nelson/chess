@@ -1,0 +1,27 @@
+.board {
+
+    margin: 0px auto;
+    width: 640px;
+
+    .row {
+
+        display: flex;
+
+        .column {
+
+            .square {
+                text-align: center;
+                width: 80px;
+                height: 80px;
+            }
+
+            .color1 {
+                background: rgb(118, 150, 86);
+            }
+
+            .color2 {
+                background: rgb(238, 238, 210);
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Board } from '../board';
-import { BoardService } from '../board.service';
+import { Board } from '../../services/board/board';
+import { BoardService } from '../../services/board/board.service';
 
 @Component({
   selector: 'app-board',
@@ -15,6 +15,5 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
     this.board = this.service.getBoard();
-    console.log(this.board)
   }
 }
