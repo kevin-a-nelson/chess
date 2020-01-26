@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { TestComponent } from './test/test.component';
   ],
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
+    PageNotFoundComponent
   ],
   providers: [],
   bootstrap: [
