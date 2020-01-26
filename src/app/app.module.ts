@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { PlayComponent } from './play/play.component';
 import { BoardComponent } from './board/board.component';
+import { ChessPieceComponent } from './chess-piece/chess-piece.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { BoardComponent } from './board/board.component';
     PageNotFoundComponent,
     HomeComponent,
     PlayComponent,
-    BoardComponent
+    BoardComponent,
+    ChessPieceComponent
   ],
   providers: [],
   bootstrap: [

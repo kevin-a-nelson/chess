@@ -2,7 +2,7 @@
     <div class="row" *ngFor="let row of board.board; index as j">
         <div class="column" *ngFor="let column of row; index as k">
             <div class="square">
-                {{ board.board[j][k] }}
+                <app-chess-piece [piece]="board.board[j][k]"></app-chess-piece>
             </div>
         </div>
     </div>
