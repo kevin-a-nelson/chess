@@ -1,0 +1,11 @@
+<div class="square"
+     [ngClass]="color">
+    <app-chess-piece
+        *ngIf="piece"
+        [piece]="piece"
+        (select)="onSelect()"
+        (unSelect)="onUnSelect()"
+    ></app-chess-piece>
+
+    <div *ngIf="selected">selected</div>
+</div>

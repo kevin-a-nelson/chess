@@ -1,3 +1,4 @@
-<div *ngIf="chessPiece.symbol">
-    <img [src]="chessPiece.image">
-</div>
+<img 
+    [src]="chessPiece.image"
+    (click)="onClickMe()"
+>
