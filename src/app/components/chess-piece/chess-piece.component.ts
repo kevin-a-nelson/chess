@@ -12,20 +12,13 @@ import { EventEmitter } from '@angular/core';
 export class ChessPieceComponent implements OnInit {
   @Input() piece: string;
   @Output() select: EventEmitter<any> = new EventEmitter();
-  @Output() unSelect: EventEmitter<any> = new EventEmitter();
   selected: boolean;
   chessPiece: ChessPiece;
 
   constructor(private service: ChessPieceService) { }
 
-  onClickMe() {
-    this.selected = !this.selected;
-
-    if (this.selected) {
-      this.select.emit(null);
-    } else {
-      this.unSelect.emit(null);
-    }
+  onClick() {
+    this.select.emit("test");
   }
 
   ngOnInit() {

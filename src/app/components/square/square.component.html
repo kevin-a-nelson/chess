@@ -3,9 +3,6 @@
     <app-chess-piece
         *ngIf="piece"
         [piece]="piece"
-        (select)="onSelect()"
-        (unSelect)="onUnSelect()"
+        (select)="onSelect(row.toString() + column.toString())"
     ></app-chess-piece>
-
-    <div *ngIf="selected">selected</div>
 </div>

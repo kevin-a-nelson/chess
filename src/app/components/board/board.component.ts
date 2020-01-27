@@ -10,10 +10,17 @@ import { BoardService } from '../../services/board/board.service';
 
 export class BoardComponent implements OnInit {
   board: Board;
+  selectedId: string;
 
   constructor(private service: BoardService) { }
 
+  onSelect(id: string) {
+    this.selectedId = id;
+    console.log(this.selectedId);
+  }
+
   ngOnInit() {
+    this.selectedId = "";
     this.board = this.service.getBoard();
   }
 }

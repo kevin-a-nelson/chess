@@ -1,5 +1,5 @@
 <div class="board">
-    <div class="row" 
+    <div class="row"
          *ngFor="let row of board.board; index as j">
         <div class="column"
              *ngFor="let column of row; index as k">
@@ -7,6 +7,9 @@
                 [row]="j"
                 [column]="k"
                 [piece]="board.board[j][k]"
+                [selectedId]="selectedId"
+                [id]="j.toString() + k.toString()"
+                (selected)="onSelect(j.toString() + k.toString())"
              ></app-square>
         </div>
     </div>
