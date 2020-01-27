@@ -4,5 +4,6 @@
         *ngIf="piece"
         [piece]="piece"
         (select)="onSelect(row.toString() + column.toString())"
+        (click)="onClick()"
     ></app-chess-piece>
 </div>

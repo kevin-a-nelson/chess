@@ -11,12 +11,16 @@ import { BoardService } from '../../services/board/board.service';
 export class BoardComponent implements OnInit {
   board: Board;
   selectedId: string;
+  prevSelectedId: string;
 
   constructor(private service: BoardService) { }
 
   onSelect(id: string) {
+    this.prevSelectedId = this.selectedId;
     this.selectedId = id;
-    console.log(this.selectedId);
+
+    console.log(this.prevSelectedId);
+
   }
 
   ngOnInit() {

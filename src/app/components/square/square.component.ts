@@ -13,17 +13,29 @@ export class SquareComponent implements OnInit {
   @Input() piece: string;
   @Input() id: string;
   @Input() selectedId: string;
+  @Input() prevSelectedId: string;
 
   @Output() selected: EventEmitter<any> = new EventEmitter();
 
-  selectedRowCol: string;
   color: string;
 
   ngOnChanges(changes: SimpleChanges) {
+
     if (this.selectedId === this.id) {
       this.color = 'select-color'
     } else {
       this.color = ((this.row + this.column) % 2 == 0) ? 'even-color' : 'odd-color';
+    }
+
+  }
+
+  onClick() {
+    if (this.selectedId === this.prevSelectedId) {
+      if (this.color === 'select-color') {
+        this.color = ((this.row + this.column) % 2 == 0) ? 'even-color' : 'odd-color';
+      } else {
+        this.color = 'select-color'
+      }
     }
   }
 
@@ -34,13 +46,11 @@ export class SquareComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.selectedId);
 
     if (this.selectedId === this.id) {
       this.color = 'select-color'
     } else {
       this.color = ((this.row + this.column) % 2 == 0) ? 'even-color' : 'odd-color';
     }
-    this.selectedRowCol = "";
   }
 }

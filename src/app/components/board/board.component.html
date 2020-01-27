@@ -8,6 +8,7 @@
                 [column]="k"
                 [piece]="board.board[j][k]"
                 [selectedId]="selectedId"
+                [prevSelectedId]="prevSelectedId"
                 [id]="j.toString() + k.toString()"
                 (selected)="onSelect(j.toString() + k.toString())"
              ></app-square>
