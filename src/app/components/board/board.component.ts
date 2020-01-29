@@ -15,12 +15,41 @@ export class BoardComponent implements OnInit {
 
   constructor(private service: BoardService) { }
 
+  selectedPiece() {
+    let cords = [+this.selectedId[0], +this.selectedId[1]];
+    return this.board['board'][cords[0]][cords[1]];
+  }
+
+  setPiece(x: number, y: number, piece: string) {
+    this.board['board'][x][y] = piece
+  }
+
+  onClick(id: string) {
+    if (this.selectedId == id) {
+      return;
+    }
+
+    let piece = this.selectedPiece();
+
+    let cords = [+id[0], +id[1]];
+
+    let selectedCords = [+this.selectedId[0], +this.selectedId[1]];
+
+    this.setPiece(cords[0], cords[1], piece)
+    this.setPiece(selectedCords[0], selectedCords[1], '');
+
+    console.log(cords);
+  }
+
   onSelect(id: string) {
     this.prevSelectedId = this.selectedId;
     this.selectedId = id;
 
-    console.log(this.prevSelectedId);
+    let piece = this.selectedPiece();
 
+    let cords = [+this.selectedId[0], +this.selectedId[1]];
+
+    this.setPiece(cords[0], cords[1], piece)
   }
 
   ngOnInit() {

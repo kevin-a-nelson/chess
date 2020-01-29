@@ -11,6 +11,7 @@
                 [prevSelectedId]="prevSelectedId"
                 [id]="j.toString() + k.toString()"
                 (selected)="onSelect(j.toString() + k.toString())"
+                (click)="onClick(j.toString() + k.toString())"
              ></app-square>
         </div>
     </div>

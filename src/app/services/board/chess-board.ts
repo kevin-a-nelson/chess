@@ -11,6 +11,4 @@ const board = [
     ['WR', 'WKn', 'WB', 'WQ', 'WKi', 'WB', 'WKn', 'WR'],
 ]
 
-export const CHESS_BOARD: Board = {
-    board: board,
-}
+export const CHESS_BOARD: Board = { board };
